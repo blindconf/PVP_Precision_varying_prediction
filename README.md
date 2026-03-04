@@ -1,7 +1,6 @@
 # Precision-Varying Prediction (PVP)
 # [INTERSPEECH 2026] Precision-Varying Prediction (PVP): Robustifying ASR systems against adversarial attacks
-We propose DistriBlock, a novel detection method for adversarial attacks on neural network-based ASR systems. 
-We show that characteristics of the distribution over the output tokens can serve as features of binary classifiers.
+
 
 
 This paper [Precision-Varying Prediction (PVP): Robustifying ASR systems against adversarial attacks](https://arxiv.org/abs/2305.17000) is submitted to Interspeech 2026. A demo with a selection of benign, adversarial, and noisy data employed in our experiments is available online: [PVP Demo](Link: ).
@@ -32,10 +31,10 @@ In addition, Speechbrain contains pre-trained models that can also be used:
 * [wav2vec 2.0 with CTC trained on LibriSpeech]((https://huggingface.co/speechbrain/asr-wav2vec2-librispeech))
 
 * [Transformer trained on LibriSpeech](https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech)
+* Wh
   
 #### 4. Adversarial attacks
-To generate Adversarial Examples, we utilized [RobustSpeech](https://github.com/RaphaelOlivier/robust_speech), a repository that contains a PyTorch implementation of all considered attacks in our paper.
-Please refer to their website for instructions on how to generate adversarial examples. 
+To generate Adversarial Examples in different precisions,
 
 As an example, csv files for Librispeech corpus and its corresponding CW adversarial examples, along with the target transcription, are provided in the results folder. These files can also be used to generate the adversarial examples. 
 The data should be stored using the following folder structure:
@@ -93,14 +92,3 @@ python distriblock_filtering.py hparams/transformer.yaml
 ```
 Again, change the hyperparameters in the YAML file and CSV files if testing another type of adversarial attack.
 
-### Citation
-If you find value in this repository, please consider citing the preprint of our paper:
-```bibtex
-@inproceedings{
-Pizarro2024DistriBlock,
-title={DistriBlock: Identifying adversarial audio samples by leveraging characteristics of the output distribution},
-author={Pizarro, Matías and Kolossa, Dorothea and Fischer, Asja},
-booktitle={The 40th Conference on Uncertainty in Artificial Intelligence},
-year={2024},
-}
-```
