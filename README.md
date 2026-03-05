@@ -1,39 +1,23 @@
-# Precision-Varying Prediction (PVP)
 # [INTERSPEECH 2026] Precision-Varying Prediction (PVP): Robustifying ASR systems against adversarial attacks
 
-This repository contains the implementation for the paper
-Precision-Varying Prediction (PVP): Robustifying ASR systems against adversarial attacks
-submitted to Interspeech 2026.
-
+This repository contains the implementation for the paper Precision-Varying Prediction (PVP): Robustifying ASR systems against adversarial attacks submitted to Interspeech 2026.
 A demo with a selection of benign, adversarial, and noisy audio samples used in our experiments is available here:
-PVP Demo: (link coming soon)
-
-Overview
-
-With the increasing deployment of automated and agentic systems, ensuring the adversarial robustness of Automatic Speech Recognition (ASR) models has become critical.
-
-We observe that changing the numerical precision of an ASR model during inference reduces the success rate of adversarial attacks. Based on this observation, we introduce Precision-Varying Prediction (PVP), a lightweight strategy that improves robustness by randomly sampling different precision settings during inference.
-
-Additionally, the same principle can be used for adversarial example detection by comparing outputs produced at different precisions and modeling their variability with a Gaussian classifier.
+[PVP Demo](https://blindconf.github.io/fingerprint_demo/).
+> With the increasing deployment of automated and agentic systems, ensuring the adversarial robustness of Automatic Speech Recognition (ASR) models has become critical.
+> We observe that changing the numerical precision of an ASR model during inference reduces the success rate of adversarial attacks.
+> Based on this observation, we introduce Precision-Varying Prediction (PVP), a lightweight strategy that improves robustness by randomly sampling different precision settings during inference.
+> Additionally, the same principle can be used for adversarial example detection by comparing outputs produced at different precisions and modeling their variability with a Gaussian classifier.
 
 Experimental results show:
-
 Improved robustness against multiple attack types
-
 Competitive adversarial detection performance
-
 Applicability across multiple ASR architectures
 
-Prerequisites
-
+## Prerequisites
 Before running the PVP experiments, complete the following steps:
-
 1. Install SpeechBrain
-
 2. Download the datasets
-
 3. Download pre-trained ASR models
-
 4. Generate or obtain adversarial examples
 
 # 1. Install SpeechBrain
