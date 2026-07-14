@@ -131,7 +131,7 @@ Steps:
 
 To run the classifier:
  ```
-python distriblock_classifiers.py -h
+python train_with_wav2vec_classifier.py -h
 
 ```
 
