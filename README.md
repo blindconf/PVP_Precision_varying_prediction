@@ -2,11 +2,13 @@
 
 This repository contains the implementation for the paper Precision-Varying Prediction (PVP): Robustifying ASR systems against adversarial attacks submitted to Interspeech 2026.
 A demo with a selection of benign, adversarial, and noisy audio samples used in our experiments is available here:
-[PVP Demo](https://blindconf.github.io/fingerprint_demo/).
-> With the increasing deployment of automated and agentic systems, ensuring the adversarial robustness of Automatic Speech Recognition (ASR) models has become critical.
-> We observe that changing the numerical precision of an ASR model during inference reduces the success rate of adversarial attacks.
-> Based on this observation, we introduce Precision-Varying Prediction (PVP), a lightweight strategy that improves robustness by randomly sampling different precision settings during inference.
-> Additionally, the same principle can be used for adversarial example detection by comparing outputs produced at different precisions and modeling their variability with a Gaussian classifier.
+[PVP Demo](https://blindconf.github.io/PVP_demo/).
+> With the increasing deployment of automated and agentic systems, ensuring the adversarial robustness of automatic speech recognition (ASR) models has become highly relevant. 
+> We observe that changing the precision of an ASR model during inference reduces the likelihood of adversarial attacks to succeed.
+> We take advantage of this fact to make models more robust simply by randomly sampling the precision during prediction. 
+> Moreover, this insight can be turned into an adversarial example detection strategy by implementing a simple Gaussian classifier that thresholds the differences between outputs of models run with different precision.
+> To further enhance security boundaries, we combine the approach with an existing uncertainty-based defense mechanism, which forces adaptive adversaries to introduce highly perceptible noise to bypass detection.
+> An experimental analysis across various ASR models, languages, and attack types demonstrates a significant increase in adversarial robustness, competitive detection capabilities, and resistance to adaptive threats.
 
 Experimental results show:
 Improved robustness against multiple attack types
